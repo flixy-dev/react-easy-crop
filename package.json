@@ -1,17 +1,20 @@
 {
-  "name": "react-easy-crop",
+  "name": "@flixy-dev/react-easy-crop",
   "version": "5.0.2",
   "description": "A React component to crop images/videos with easy interactions",
-  "homepage": "https://ValentinH.github.io/react-easy-crop/",
+  "type": "module",
   "keywords": [
     "react",
     "crop",
     "cropper",
     "image crop"
   ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ValentinH/react-easy-crop"
+    "url": "https://github.com/flixy-dev/react-easy-crop"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -23,7 +26,7 @@
     "start": "vite ./examples --port 3001 --clearScreen false",
     "auto": "auto",
     "postversion": "yarn build",
-    "build": "yarn-or-npm bili && yarn-or-npm build:copy-files",
+    "build": "tsup",
     "docs:start": "cd docs && yarn-or-npm develop",
     "docs:deploy": "cd docs && yarn-or-npm deploy",
     "test": "yarn-or-npm unit && yarn-or-npm e2e && yarn-or-npm lint",
@@ -47,8 +50,7 @@
     "react-dom": ">=16.4.0"
   },
   "dependencies": {
-    "normalize-wheel": "^1.0.1",
-    "tslib": "2.0.1"
+    "normalize-wheel": "^1.0.1"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^10.42.0",
@@ -90,6 +92,7 @@
     "start-server-and-test": "^1.15.3",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
+    "tsup": "^8.0.1",
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
     "yarn-or-npm": "^3.0.1"
